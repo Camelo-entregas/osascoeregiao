@@ -17,7 +17,7 @@
             background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
             color: #333;
             line-height: 1.6;
-            padding-bottom: 80px;
+            overflow-x: hidden;
         }
         
         .container {
@@ -30,7 +30,10 @@
         header {
             background: linear-gradient(135deg, #1e7b1e 0%, #25D366 100%);
             color: white;
-            padding: 20px 0;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
@@ -41,7 +44,7 @@
         }
         
         .logo {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
             display: flex;
             align-items: center;
@@ -49,7 +52,7 @@
         
         .logo i {
             margin-right: 10px;
-            font-size: 32px;
+            font-size: 28px;
         }
         
         nav ul {
@@ -58,14 +61,14 @@
         }
         
         nav ul li {
-            margin-left: 25px;
+            margin-left: 20px;
         }
         
         nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: 500;
-            font-size: 18px;
+            font-size: 16px;
             transition: all 0.3s ease;
             padding: 5px 10px;
             border-radius: 5px;
@@ -77,42 +80,30 @@
         
         /* Hero Section */
         .hero {
-            padding: 60px 0;
-            background: url('https://images.unsplash.com/photo-1564419320461-6870880221ad?ixlib=rb-4.0.3') no-repeat center center/cover;
+            padding: 80px 0 60px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1564419320461-6870880221ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
             color: white;
             text-align: center;
             position: relative;
             margin-bottom: 50px;
         }
         
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-        }
-        
         .hero-content {
-            position: relative;
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px;
-            background: rgba(30, 123, 30, 0.85);
-            border-radius: 15px;
+            padding: 30px;
         }
         
         .hero h1 {
-            font-size: 42px;
+            font-size: 36px;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .hero p {
-            font-size: 22px;
-            margin-bottom: 30px;
+            font-size: 20px;
+            margin-bottom: 25px;
         }
         
         .price-tag {
@@ -120,11 +111,18 @@
             background: #ffcc00;
             color: #333;
             font-weight: bold;
-            padding: 10px 25px;
+            padding: 12px 30px;
             border-radius: 30px;
             font-size: 24px;
             margin: 20px 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
         
         /* Services Section */
@@ -134,7 +132,7 @@
         
         .section-title {
             text-align: center;
-            font-size: 36px;
+            font-size: 32px;
             margin-bottom: 50px;
             color: #1e7b1e;
             position: relative;
@@ -154,43 +152,44 @@
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
         
         .service-card {
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
         }
         
         .service-icon {
             background: #1e7b1e;
             color: white;
-            font-size: 50px;
-            padding: 30px;
+            font-size: 48px;
+            padding: 25px;
             text-align: center;
         }
         
         .service-content {
-            padding: 25px;
+            padding: 20px;
         }
         
         .service-content h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
+            font-size: 22px;
+            margin-bottom: 12px;
             color: #1e7b1e;
         }
         
         .service-content p {
             color: #666;
+            font-size: 16px;
         }
         
         /* About Section */
@@ -203,7 +202,7 @@
         .about-content {
             display: flex;
             align-items: center;
-            gap: 50px;
+            gap: 40px;
         }
         
         .about-text {
@@ -211,25 +210,25 @@
         }
         
         .about-text h2 {
-            font-size: 36px;
+            font-size: 32px;
             color: #1e7b1e;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         
         .about-text p {
-            margin-bottom: 20px;
-            font-size: 18px;
-            line-height: 1.8;
+            margin-bottom: 18px;
+            font-size: 17px;
+            line-height: 1.7;
         }
         
         .benefits-list {
             list-style: none;
-            margin-top: 30px;
+            margin-top: 25px;
         }
         
         .benefits-list li {
-            margin-bottom: 15px;
-            font-size: 18px;
+            margin-bottom: 14px;
+            font-size: 17px;
             display: flex;
             align-items: center;
         }
@@ -237,14 +236,14 @@
         .benefits-list li i {
             color: #25D366;
             margin-right: 10px;
-            font-size: 22px;
+            font-size: 20px;
         }
         
         .about-image {
             flex: 1;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
         }
         
         .about-image img {
@@ -264,20 +263,20 @@
         }
         
         .contact h2 {
-            font-size: 42px;
-            margin-bottom: 30px;
+            font-size: 36px;
+            margin-bottom: 25px;
         }
         
         .contact-info {
-            font-size: 28px;
-            margin-bottom: 40px;
+            font-size: 24px;
+            margin-bottom: 30px;
         }
         
         .contact-info a {
             color: white;
             text-decoration: none;
             display: block;
-            margin: 10px 0;
+            margin: 15px 0;
             transition: all 0.3s ease;
         }
         
@@ -289,16 +288,16 @@
         .websites {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 25px;
             margin-top: 30px;
             flex-wrap: wrap;
         }
         
         .website-card {
             background: rgba(255, 255, 255, 0.15);
-            padding: 20px 40px;
+            padding: 15px 30px;
             border-radius: 10px;
-            font-size: 20px;
+            font-size: 18px;
             transition: all 0.3s ease;
         }
         
@@ -331,19 +330,14 @@
         .whatsapp-btn:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-        }
-        
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+            animation: none;
         }
         
         /* Footer */
         footer {
             background: #1a1a1a;
             color: #ddd;
-            padding: 40px 0;
+            padding: 40px 0 20px;
             text-align: center;
         }
         
@@ -352,21 +346,23 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 30px;
+            margin-bottom: 30px;
         }
         
         .footer-section {
             flex: 1;
             min-width: 250px;
+            text-align: left;
         }
         
         .footer-section h3 {
             color: #25D366;
             margin-bottom: 20px;
-            font-size: 22px;
+            font-size: 20px;
         }
         
         .footer-section p, .footer-section ul {
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.8;
         }
         
@@ -389,10 +385,9 @@
         }
         
         .copyright {
-            margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid #444;
-            font-size: 16px;
+            font-size: 14px;
         }
         
         /* Responsive Design */
@@ -402,11 +397,11 @@
             }
             
             .hero h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
             
             .hero p {
-                font-size: 20px;
+                font-size: 18px;
             }
         }
         
@@ -417,39 +412,43 @@
             }
             
             nav ul {
-                margin-top: 20px;
+                margin-top: 15px;
                 justify-content: center;
             }
             
             nav ul li {
-                margin: 0 10px;
+                margin: 0 8px;
             }
             
             .hero-content {
-                padding: 30px 20px;
+                padding: 20px 15px;
             }
             
             .hero h1 {
-                font-size: 32px;
+                font-size: 28px;
             }
             
             .section-title {
-                font-size: 32px;
+                font-size: 28px;
+            }
+            
+            .contact-info {
+                font-size: 20px;
             }
         }
         
         @media (max-width: 480px) {
             .hero h1 {
-                font-size: 28px;
+                font-size: 24px;
             }
             
             .price-tag {
                 font-size: 20px;
-                padding: 8px 20px;
+                padding: 10px 25px;
             }
             
             .contact-info {
-                font-size: 22px;
+                font-size: 18px;
             }
             
             .whatsapp-btn {
@@ -459,12 +458,22 @@
                 bottom: 20px;
                 right: 20px;
             }
+            
+            .website-card {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+            
+            .service-icon {
+                font-size: 40px;
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/551131361615" class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/551131361615" class="whatsapp-btn" target="_blank" title="Chamar no WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -557,7 +566,7 @@
                 </div>
                 
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1591348131719-8c1a7b8f2b9a?ixlib=rb-4.0.3" alt="Motoboy profissional">
+                    <img src="https://images.unsplash.com/photo-1591348131719-8c1a7b8f2b9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Motoboy profissional">
                 </div>
             </div>
         </div>
