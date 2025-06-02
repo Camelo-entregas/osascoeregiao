@@ -3,307 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motoboy em Osasco e São Paulo - Entrega Rápida a partir de R$14</title>
+    <title>Motoboy Express - Entrega Rápida em Osasco e SP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
         }
         
         body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
-            overflow-x: hidden;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
         
         /* Header */
         header {
-            background: linear-gradient(135deg, #1e7b1e 0%, #25D366 100%);
-            color: white;
+            background-color: #fff;
             padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .logo {
             font-size: 24px;
-            font-weight: 700;
+            font-weight: bold;
+            color: #333;
             display: flex;
             align-items: center;
         }
         
         .logo i {
+            color: #FFD700;
             margin-right: 10px;
             font-size: 28px;
         }
         
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 20px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        
-        nav ul li a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-        
         /* Hero Section */
         .hero {
-            padding: 80px 0 60px;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1564419320461-6870880221ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-            color: white;
+            padding: 60px 0;
             text-align: center;
-            position: relative;
-            margin-bottom: 50px;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 30px;
+            background-color: #fff;
+            margin-bottom: 30px;
         }
         
         .hero h1 {
-            font-size: 36px;
+            font-size: 32px;
+            color: #333;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: 600;
         }
         
         .hero p {
-            font-size: 20px;
-            margin-bottom: 25px;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .price-tag {
             display: inline-block;
-            background: #ffcc00;
+            background-color: #FFD700;
             color: #333;
             font-weight: bold;
             padding: 12px 30px;
             border-radius: 30px;
             font-size: 24px;
             margin: 20px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            animation: pulse 2s infinite;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+        .divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 40px 0;
         }
         
         /* Services Section */
         .services {
-            padding: 60px 0;
+            padding: 40px 0;
+            background-color: #fff;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         
         .section-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 30px;
             text-align: center;
-            font-size: 32px;
-            margin-bottom: 50px;
-            color: #1e7b1e;
-            position: relative;
+            font-weight: 600;
         }
         
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: #25D366;
-            border-radius: 2px;
+        .services-list {
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+        .service-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #FFD700;
         }
         
-        .service-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .service-item h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
         
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        }
-        
-        .service-icon {
-            background: #1e7b1e;
-            color: white;
-            font-size: 48px;
-            padding: 25px;
-            text-align: center;
-        }
-        
-        .service-content {
-            padding: 20px;
-        }
-        
-        .service-content h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
-            color: #1e7b1e;
-        }
-        
-        .service-content p {
+        .service-item p {
             color: #666;
             font-size: 16px;
         }
         
-        /* About Section */
-        .about {
-            padding: 60px 0;
-            background: white;
-            margin: 60px 0;
-        }
-        
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-text h2 {
-            font-size: 32px;
-            color: #1e7b1e;
-            margin-bottom: 20px;
-        }
-        
-        .about-text p {
-            margin-bottom: 18px;
-            font-size: 17px;
-            line-height: 1.7;
-        }
-        
-        .benefits-list {
-            list-style: none;
-            margin-top: 25px;
-        }
-        
-        .benefits-list li {
-            margin-bottom: 14px;
-            font-size: 17px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .benefits-list li i {
-            color: #25D366;
-            margin-right: 10px;
-            font-size: 20px;
-        }
-        
-        .about-image {
-            flex: 1;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
         /* Contact Section */
         .contact {
-            padding: 60px 0;
-            background: linear-gradient(135deg, #1e7b1e 0%, #25D366 100%);
-            color: white;
             text-align: center;
-            border-radius: 15px;
-            margin: 60px 0;
+            padding: 40px 0;
         }
         
-        .contact h2 {
-            font-size: 36px;
-            margin-bottom: 25px;
-        }
-        
-        .contact-info {
+        .phone-number {
             font-size: 24px;
-            margin-bottom: 30px;
-        }
-        
-        .contact-info a {
-            color: white;
-            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
             display: block;
-            margin: 15px 0;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-info a:hover {
-            color: #ffcc00;
-            transform: scale(1.05);
-        }
-        
-        .websites {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .website-card {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-size: 18px;
-            transition: all 0.3s ease;
-        }
-        
-        .website-card:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-5px);
         }
         
         /* WhatsApp Button */
@@ -324,122 +161,17 @@
             z-index: 1000;
             text-decoration: none;
             transition: all 0.3s ease;
-            animation: pulse 2s infinite;
         }
         
         .whatsapp-btn:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-            animation: none;
-        }
-        
-        /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: #ddd;
-            padding: 40px 0 20px;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 250px;
-            text-align: left;
-        }
-        
-        .footer-section h3 {
-            color: #25D366;
-            margin-bottom: 20px;
-            font-size: 20px;
-        }
-        
-        .footer-section p, .footer-section ul {
-            font-size: 15px;
-            line-height: 1.8;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-section a {
-            color: #ddd;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-section a:hover {
-            color: #25D366;
-        }
-        
-        .copyright {
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            font-size: 14px;
         }
         
         /* Responsive Design */
-        @media (max-width: 992px) {
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .hero h1 {
-                font-size: 32px;
-            }
-            
-            .hero p {
-                font-size: 18px;
-            }
-        }
-        
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            nav ul {
-                margin-top: 15px;
-                justify-content: center;
-            }
-            
-            nav ul li {
-                margin: 0 8px;
-            }
-            
-            .hero-content {
-                padding: 20px 15px;
-            }
-            
             .hero h1 {
                 font-size: 28px;
-            }
-            
-            .section-title {
-                font-size: 28px;
-            }
-            
-            .contact-info {
-                font-size: 20px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 24px;
             }
             
             .price-tag {
@@ -447,8 +179,8 @@
                 padding: 10px 25px;
             }
             
-            .contact-info {
-                font-size: 18px;
+            .section-title {
+                font-size: 24px;
             }
             
             .whatsapp-btn {
@@ -457,16 +189,6 @@
                 font-size: 30px;
                 bottom: 20px;
                 right: 20px;
-            }
-            
-            .website-card {
-                padding: 12px 20px;
-                font-size: 16px;
-            }
-            
-            .service-icon {
-                font-size: 40px;
-                padding: 20px;
             }
         }
     </style>
@@ -480,149 +202,52 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <i class="fas fa-motorcycle"></i>
-                    <span>Motoboy Express</span>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Serviços</a></li>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#contact">Contato</a></li>
-                    </ul>
-                </nav>
+            <div class="logo">
+                <i class="fas fa-motorcycle"></i>
+                <span>Motoboy Express</span>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Motoboy em Osasco e São Paulo – Entrega Rápida a partir de R$ 14</h1>
-                <p>Serviços de entrega expressa em Osasco e toda São Paulo!</p>
-                <div class="price-tag">A partir de R$ 14,00</div>
+            <h1>Motoboy em Osasco e São Paulo – Entrega Rápida a partir de R$ 14</h1>
+            <p>Serviços de entrega expressa em Osasco e toda São Paulo!</p>
+            <div class="price-tag">A partir de R$ 14,00</div>
+            
+            <!-- Ícone amarelo com telefone abaixo -->
+            <div style="margin-top: 40px;">
+                <i class="fas fa-phone" style="font-size: 40px; color: #FFD700;"></i>
+                <span class="phone-number">(11) 3136-1615</span>
             </div>
         </div>
     </section>
+
+    <div class="container">
+        <div class="divider"></div>
+    </div>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section class="services">
         <div class="container">
             <h2 class="section-title">Nossos Serviços</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Atendimento Empresarial</h3>
-                        <p>Entregas rápidas e confiáveis para empresas de todos os portes. Garantimos pontualidade e segurança para seus documentos e produtos.</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Atendimento Pessoal</h3>
-                        <p>Serviços personalizados para pessoas físicas. Precisa enviar um documento importante ou um presente? Nós resolvemos!</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-box"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Coleta de Encomendas</h3>
-                        <p>Coletamos documentos, mercadorias e produtos de e-commerce em qualquer local de Osasco e São Paulo com agilidade e segurança.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">Por que escolher nosso serviço?</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Somos especialistas em entregas rápidas e eficientes na região de Osasco e São Paulo. Com uma equipe de motoboys confiáveis e treinados, garantimos que suas encomendas cheguem ao destino com segurança e no menor tempo possível.</p>
-                    
-                    <p>Oferecemos preços competitivos a partir de R$ 14,00 e atendimento personalizado para cada cliente, seja pessoa física ou empresa. Nossa prioridade é sua satisfação!</p>
-                    
-                    <ul class="benefits-list">
-                        <li><i class="fas fa-check-circle"></i> Motoboys confiáveis e rápidos</li>
-                        <li><i class="fas fa-check-circle"></i> Preços acessíveis a partir de R$ 14</li>
-                        <li><i class="fas fa-check-circle"></i> Atendimento em toda São Paulo e Osasco</li>
-                        <li><i class="fas fa-check-circle"></i> Serviço 24 horas para emergências</li>
-                        <li><i class="fas fa-check-circle"></i> Rastreamento de entregas</li>
-                    </ul>
-                </div>
-                
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1591348131719-8c1a7b8f2b9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Motoboy profissional">
-                </div>
-            </div>
+            <ul class="services-list">
+                <li class="service-item">
+                    <h3>Motoboy em Osasco</h3>
+                    <p>WhatsApp Business — Visão geral - Camelho — VOLUME DE SUPERIORIA — GRAVE PIX, MR MOTO</p>
+                </li>
+                <!-- Adicione mais serviços conforme necessário -->
+            </ul>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section class="contact">
         <div class="container">
-            <h2>Entre em Contato Agora!</h2>
-            <div class="contact-info">
-                <a href="tel:1131361615"><i class="fas fa-phone"></i> (11) 3136-1615</a>
-                <a href="https://wa.me/551131361615" target="_blank"><i class="fab fa-whatsapp"></i> Chame no WhatsApp</a>
-            </div>
-            
-            <div class="websites">
-                <div class="website-card">
-                    <i class="fas fa-globe"></i> entregasmotoboy.com.br
-                </div>
-                <div class="website-card">
-                    <i class="fas fa-globe"></i> cameloentregas.com.br
-                </div>
-            </div>
+            <p>Entre em contato conosco para mais informações</p>
+            <a href="tel:1131361615" class="phone-number">(11) 3136-1615</a>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Motoboy Express</h3>
-                    <p>Entregas rápidas e seguras em Osasco e toda São Paulo. Conte conosco para suas necessidades de entrega!</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Horário de Atendimento</h3>
-                    <p>Segunda a Sexta: 7h às 22h</p>
-                    <p>Sábado: 8h às 20h</p>
-                    <p>Domingo: 9h às 18h</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Serviços</a></li>
-                        <li><a href="#about">Sobre Nós</a></li>
-                        <li><a href="#contact">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 Motoboy Express - Todos os direitos reservados | (11) 3136-1615</p>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
