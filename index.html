@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motoboy Express - Entrega Rápida em Osasco e SP</title>
+    <title>Motoboy em São Paulo e Osasco - Entrega Rápida</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -54,11 +54,18 @@
             margin-bottom: 30px;
         }
         
-        .hero h1 {
+        .main-title {
             font-size: 32px;
             color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             font-weight: 600;
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 500;
         }
         
         .hero p {
@@ -70,16 +77,28 @@
             margin-right: auto;
         }
         
+        .price-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+        }
+        
         .price-tag {
-            display: inline-block;
             background-color: #FFD700;
             color: #333;
             font-weight: bold;
             padding: 12px 30px;
             border-radius: 30px;
             font-size: 24px;
-            margin: 20px 0;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+        
+        .phone-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
         }
         
         .divider {
@@ -103,44 +122,6 @@
             margin-bottom: 30px;
             text-align: center;
             font-weight: 600;
-        }
-        
-        .services-list {
-            list-style: none;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .service-item {
-            margin-bottom: 25px;
-            padding-left: 20px;
-            border-left: 3px solid #FFD700;
-        }
-        
-        .service-item h3 {
-            font-size: 20px;
-            color: #333;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        .service-item p {
-            color: #666;
-            font-size: 16px;
-        }
-        
-        /* Contact Section */
-        .contact {
-            text-align: center;
-            padding: 40px 0;
-        }
-        
-        .phone-number {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            margin-top: 10px;
-            display: block;
         }
         
         /* WhatsApp Button */
@@ -170,13 +151,21 @@
         
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
+            .main-title {
                 font-size: 28px;
+            }
+            
+            .subtitle {
+                font-size: 20px;
             }
             
             .price-tag {
                 font-size: 20px;
                 padding: 10px 25px;
+            }
+            
+            .phone-number {
+                font-size: 20px;
             }
             
             .section-title {
@@ -212,14 +201,13 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Motoboy em Osasco e São Paulo – Entrega Rápida a partir de R$ 14</h1>
+            <h1 class="main-title">Motoboy em São Paulo</h1>
+            <h2 class="subtitle">Osasco e região</h2>
             <p>Serviços de entrega expressa em Osasco e toda São Paulo!</p>
-            <div class="price-tag">A partir de R$ 14,00</div>
             
-            <!-- Ícone amarelo com telefone abaixo -->
-            <div style="margin-top: 40px;">
-                <i class="fas fa-phone" style="font-size: 40px; color: #FFD700;"></i>
-                <span class="phone-number">(11) 3136-1615</span>
+            <div class="price-container">
+                <div class="price-tag">A partir de R$ 14,00</div>
+                <div class="phone-number">(11) 3136-1615</div>
             </div>
         </div>
     </section>
@@ -232,21 +220,7 @@
     <section class="services">
         <div class="container">
             <h2 class="section-title">Nossos Serviços</h2>
-            <ul class="services-list">
-                <li class="service-item">
-                    <h3>Motoboy em Osasco</h3>
-                    <p>WhatsApp Business — Visão geral - Camelho — VOLUME DE SUPERIORIA — GRAVE PIX, MR MOTO</p>
-                </li>
-                <!-- Adicione mais serviços conforme necessário -->
-            </ul>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <p>Entre em contato conosco para mais informações</p>
-            <a href="tel:1131361615" class="phone-number">(11) 3136-1615</a>
+            <!-- Adicione seus serviços aqui -->
         </div>
     </section>
 </body>
